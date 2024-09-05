@@ -1,0 +1,27 @@
+extend ../layout/index
+block contenido 
+    div.py-10 
+        h1.text-4xl.my-10.font-extrabold.text-center Biblioteca
+            span.font-normal Nacional
+        
+                form.space-y-5(method="PUT" action="/auth/tabla" noValidate )  
+             
+                    div.container.mx-auto.mt-10
+    div.bg-white.shadow-md.rounded-lg.overflow-hidden
+        table.min-w-full.bg-white
+            thead.bg-gray-800.text-white
+                tr
+                    th.py-3.px-4.uppercase.font-semibold.text-sm.text-left ID
+                    th.py-3.px-4.uppercase.font-semibold.text-sm.text-left Nombre
+                    th.py-3.px-4.uppercase.font-semibold.text-sm.text-left Email
+                    th.py-3.px-4.uppercase.font-semibold.text-sm.text-left Acciones
+            tbody.text-gray-700
+                tr
+                    td.py-3.px-4(name="id") 1
+                    td.py-3.px-4(name="name") leooo
+                    td.py-3.px-4(name="email") leo@correo.edu.co
+                    td.py-3.px-4 
+                        input(class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 cursor-pointer"  type="submit" value="Editar")
+                tr.bg-gray-100
+                    td.py-3.px-4 2
+                    td.py-3.p
