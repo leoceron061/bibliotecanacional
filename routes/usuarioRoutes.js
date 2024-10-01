@@ -1,14 +1,18 @@
 import express from 'express'
-import { formularioTabla,registrar,formularioRegistro,editar } from '../controllers/usuarioControllers.js'; 
+import { listar,registrar,eliminar,editar,formularioRegistro,formularioTabla,formularioEditar,confirmar } from '../controllers/usuarioControllers.js'; 
 const router=express.Router();
 
 router.get('/',(req,res)=>{
     res.send("holaaaaaa")
 })
 
-router.get('/tabla',formularioTabla)
-router.put('/tabla',editar)
+router.get('/tabla',listar)
 router.get('/registro',formularioRegistro)
 router.post('/registro',registrar)
+router.delete('/eliminar/:id',eliminar)
+router.put('/editarUsuario/:id',editar)
+//router.get('/editarUsuario/:id',editar)
+router.get('/editar/:id',formularioEditar)
+router.get('/confirmar/:token',confirmar)
 
 export default router

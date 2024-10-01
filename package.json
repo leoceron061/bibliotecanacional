@@ -19,10 +19,14 @@
   "author": "Leonardo ceron cruz",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-validator": "^7.2.0",
+    "method-override": "^3.0.0",
     "mysql2": "^3.11.0",
+    "nodemailer": "^6.9.15",
+    "path": "^0.12.7",
     "pug": "^3.0.3",
     "sequelize": "^6.37.3"
   },
