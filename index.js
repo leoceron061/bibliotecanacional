@@ -1,8 +1,16 @@
 import express from 'express'
+import csrf from 'csurf'
+import cookieParser from 'cookie-parser'
 import usuarioRoutes from './routes/usuarioRoutes.js'
+import proiedadesRoutes from './routes/propiedadesRoutes.js'
 import db from './config/db.js';
 import methodOverride from 'method-override';
 const app= express();
+//habilitar cookieParser
+//app.use( cookieParser() )
+
+//app.use(csrf({cookie: true}))
+
 //habilitar lectura de formularios
 app.use(express.urlencoded({
     extended:true
@@ -25,6 +33,7 @@ app.use(express.static('public'))
 
 
 app.use('/auth', usuarioRoutes)
+app.use('/', proiedadesRoutes)
 
 app.use(express.urlencoded({extended:true}))
 

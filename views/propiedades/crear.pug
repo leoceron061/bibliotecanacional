@@ -1,0 +1,31 @@
+extend ../layout/index
+block contenido 
+    div.py-10 
+        h1.text-4xl.my-10.font-extrabold.text-center Biblioteca
+            span.font-normal Nacional
+        h2.text-center.text-2xl.font-extrabold=pagina
+        
+        div(class="bg-white shadow py-8 px-4 rounded mx-auto w-3/4 my-10 md:px-10")
+            form.space-y-8
+                div.space-y-8
+                    h3.text-lg.leading-6.font-mediun.text-gray-900 Información General
+                    p.text-gray-600 Añade información sobre la propiedad en venta
+                    div 
+                        label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold(for="titulo") Titulo de anuncio
+                        input#titulo.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400(placeholder="Titulo propiedad, ej. Casa en la playa" type="text" name="titulo")
+
+                    div 
+                        label(class="block.text-sm.uppercase.text-gray-500.mb-3.font-bold" for="descripcion") Descripción
+                        input#descripcion.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400.h-20(placeholder="Descripción de la propiedad"  name="descripcion")    
+
+                    div(class="md:flex md:gap-4 space-y-5 md:space-y-0")
+
+                        div(class="md:w-1/2") 
+                            label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold(for="categoria") Categoria
+                            select#categoria.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400( name="categoria")
+                                option(value="") -Seleccione- 
+                    
+                        div(class="md:w-1/2") 
+                            label.block.text-sm.uppercase.text-gray-500.mb-3.font-bold(for="Precio") Precio
+                            select#Precio.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-400( name="Precio")
+                                option(value="") -Seleccione- 
